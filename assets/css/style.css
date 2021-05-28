@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+}
+.title{
+    color: whitesmoke;
+    border-bottom: 0.1rem solid rgba(250, 247, 225, 0.5);
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-spec{
+    width: 35em;
+}
+.col-form{
+    padding: 0.5rem !important;
+    margin-top: 1rem ;
+}
+.all-app{
+    margin-left: 15rem !important;
+}
+.app{
+    background-color: rgb(46, 45, 45);
+    min-width: 40rem;
+    min-height: 30rem;
+    border-radius: 2rem;
+}
+.new{
+    margin-top: 5rem;
+}
+.list {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    color: whitesmoke;
+}
+
+.task{
+    margin: 1.5rem;
+    padding: 0.3rem 0;
+    background-color: rgba(0, 0, 0, 0.253);
+    align-content: center;
+}
+
+.content{
+    margin: 0.5rem !important;
+}
