@@ -30,8 +30,8 @@ body{
     padding: 0;
     list-style: none;
     width: 100%;
-    /* flex-wrap: wrap; */
     color: whitesmoke;
+    flex-direction: column !important;
 }
 
 .task{
@@ -39,8 +39,19 @@ body{
     padding: 0.3rem 0;
     background-color: rgba(0, 0, 0, 0.253);
     align-content: center;
+    display: flex;
+    border-radius: 0.4rem;
 }
 
 .content{
-    margin: 0.5rem !important;
+    margin: auto !important;
+}
+
+.button-done{
+    margin-right: 1rem;
+}
+
+.done{
+    text-decoration: line-through;
+    background-color: transparent;
 }
