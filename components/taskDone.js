@@ -1,4 +1,4 @@
-const buttonDone = ()=>{
+const ButtonDone = ()=>{
     const button = document.createElement('button')
     button.classList.add('btn')
     button.classList.add('btn-light')
@@ -7,7 +7,6 @@ const buttonDone = ()=>{
     button.addEventListener('click', taskDone)
     return button
 }
-
 const taskDone = (e)=>{
     const buttonDone = e.target
     // pegar o pai do botao
@@ -16,4 +15,4 @@ const taskDone = (e)=>{
     taskDone.classList.toggle('done')
 }
 
-export default buttonDone
+export default ButtonDone

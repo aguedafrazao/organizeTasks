@@ -1,36 +1,23 @@
-( ()=>{
+import ButtonDone from './components/taskDone.js'
+import ButtonDelete from './components/taskDelete.js'
 
-    // funcao para criar a tarefa
-    const criarTarefa = (evento) => {
-        // forca o browser a segurar a informacao
-        evento.preventDefault();
-        const lista = document.querySelector('[data-list]')
-        const inputTarefa = document.querySelector('[data-form-input]');
-        const valor = inputTarefa.value;
-
-    // cria o elemento
-        const task = document.createElement('li')
-        task.classList.add('task')
-
-        // vai pegar o conteudo html que eu quero alterar 
-        const conteudo = `<p class="content">${valor}</p>`
-        // acessar o conteudo do html 
-        task.innerHTML = conteudo
-        // criar o botao dentro do li
-        task.appendChild(buttonDone())
-        task.appendChild(buttonDelete())
-        lista.appendChild(task)
-        inputTarefa.value = "";
-    }
-
-    const newTask = document.querySelector('[data-form-button]')
-
-
-
-
-
+    const newTask = (evento) => {
+    evento.preventDefault()
+    const list = document.querySelector('[data-list]')
+    const input = document.querySelector('[data-form-input]')
+    const valor = input.value
+    const task = document.createElement('li')
+    task.classList.add('task')
     
-// pega a funcao com oargumento e executa a partir do click
+    const conteudo = `<p class="content">${valor}</p>`
+    
+    task.innerHTML = conteudo
 
-})()
-novaTarefa.addEventListener('click', criarTarefa);
+    task.appendChild(ButtonDone())
+    task.appendChild(ButtonDelete())
+    list.appendChild(task)
+    input.value = " "
+}
+
+const addTask = document.querySelector('[data-form-button]')
+addTask.addEventListener('click', newTask)
