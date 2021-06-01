@@ -1,3 +1,4 @@
+import { ordenDates, removeDate } from "../service/date.js"
 import { createDate } from "./createDate.js"
 
 export const showTask = () =>{
@@ -7,9 +8,10 @@ export const showTask = () =>{
     const createdTasks = JSON.parse(localStorage.getItem('tasks')) || []
 
     listData.innerHTML = " "
-    createdTasks.forEach((task)=>{
+    const uniqueDates = removeDate(createdTasks)
+    ordenDates(uniqueDates)
+    uniqueDates.forEach((day)=>{
         // percorrer o local storage e exibir o valor atraves da data
-        const day = moment(task.dateFormat, 'DD/MM/YYYY')
         listData.appendChild(createDate(day))
     })
 }
