@@ -1,5 +1,6 @@
 import ButtonDone from './taskDone.js'
 import ButtonDelete from './taskDelete.js'
+import { showTask } from './showTask.js'
 
 
 export const handleNewItem = (evento) => {
@@ -22,7 +23,11 @@ export const handleNewItem = (evento) => {
     const updateTasks = [...tasks, data]
     // armazenar os dados temporariamente e transforma o objeto em string
     localStorage.setItem("tasks", JSON.stringify(updateTasks))
+    // limpa o valor do input
     input.value = " "
+
+    // 
+    showTask()
 
 }
 
@@ -30,9 +35,9 @@ export const handleNewItem = (evento) => {
 export const NewTask = ({ valor, dateFormat }) => {
     const task = document.createElement('li')
     task.classList.add('task')
-    const conteudo = `<p class="content">${dateFormat} * ${valor} </p>`
+    const content = `<p class="content">${dateFormat} * ${valor} </p>`
 
-    task.innerHTML = conteudo
+    task.innerHTML = content
 
     task.appendChild(ButtonDone())
     task.appendChild(ButtonDelete())
