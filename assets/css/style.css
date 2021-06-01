@@ -11,11 +11,18 @@ body{
     width: 35em;
 }
 .col-form{
-    padding: 0.5rem !important;
+    padding: 0.45rem !important;
     margin-top: 1rem ;
 }
 .all-app{
-    margin-left: 15rem !important;
+    margin-left: 0.5rem !important;
+}
+.input-spec{
+    width: 13.8rem !important;
+}
+.input-date{
+    height: calc(1.5em + .75rem + 2px);
+    border-radius: .25rem;
 }
 .app{
     background-color: rgb(46, 45, 45);

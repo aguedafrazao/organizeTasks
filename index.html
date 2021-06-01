@@ -18,10 +18,13 @@
             <div class="all-app d-flex justify-content-center align-middle">
                 <form class="row form-spec">
                     <div class="col col-form">
-                        <input type="text" class="form-control" id="" data-form-input>
+                        <input type="text" class="form-control input-spec" id="" data-form-input>
                     </div>
                     <div class="col col-form">
-                        <button class="btn btn-light form-button" data-form-button>To add</button>
+                        <input type="datetime-local" class="input-date" data-form-date placeholder="DD/MM/YYYY">
+                    </div>
+                    <div class="col col-form">
+                        <button class="btn btn-success form-button" data-form-button>To add</button>
                     </div>
                 </form>
             </div>
@@ -29,7 +32,10 @@
             </ul>
         </div>
     </div>
-    <script  type="module" src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>
