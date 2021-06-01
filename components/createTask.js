@@ -7,7 +7,6 @@ export const handleNewItem = (evento) => {
     // inicializando a lista vazia, o parde vai transformar a string em objeto e pegar o item
     const tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
-    const list = document.querySelector('[data-list]')
     const input = document.querySelector('[data-form-input]')
     const valor = input.value
 
@@ -21,10 +20,8 @@ export const handleNewItem = (evento) => {
     }
     // aqui eu criei uma lista e nela eu passo os valores a serem preenchidos.  '...' pega tudo que tem dentro da tarefa
     const updateTasks = [...tasks, data]
-    const createTask = NewTask(data)
     // armazenar os dados temporariamente e transforma o objeto em string
     localStorage.setItem("tasks", JSON.stringify(updateTasks))
-    list.appendChild(createTask)
     input.value = " "
 
 }
